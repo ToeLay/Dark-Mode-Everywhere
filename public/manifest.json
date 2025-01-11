@@ -1,0 +1,23 @@
+{
+    "name": "Dark Mode Everywhere",
+    "description": "Add Dark Mode to all websites",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "ContentScript.res.js"
+            ]
+        }
+    ]
+}
